@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-6">
+    <a routerLink="/" class="btn btn-link">
+      <i class="fa fa-arrow-circle-o-left"></i> Back to Dashboard
+    </a>
+  </div>
+  <div class="col-md-6"></div>
+</div>
+
+<div class="card">
+  <div class="card-header">Edit Settings</div>
+  <div class="card-body ml-3">
+    <form (submit)="onSubmit()">
+      <div class="form-group">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          name="allowRegistration"
+          class="form-check-input"
+          [checked]="settings.allowRegistration"
+          (change)="toggleRegistration()"
+        />
+        <label>Allow Registration</label>
+      </div>
+
+      <div class="form-group">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          name="disableBalanceOnAdd"
+          [checked]="settings.disableBalanceOnAdd"
+          (change)="toggleDisableBalanceOnAdd()"
+        />
+        <label>Disable Balance on Add</label>
+      </div>
+
+      <div class="form-group">
+        <input
+          type="checkbox"
+          name="disableBalanceOnEdit"
+          class="form-check-input"
+          [checked]="settings.disableBalanceOnEdit"
+          (change)="toggleDisableBalanceOnEdit()"
+        />
+        <label>Disable Balance on Edit</label>
+      </div>
+
+      <input type="submit" value="submit" class="btn btn-success btn-block" />
+    </form>
+  </div>
+</div>

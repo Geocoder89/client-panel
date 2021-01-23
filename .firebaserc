@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-demo-project": {
+      "hosting": {
+        "client-panel": [
+          "fir-demo-project"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "client-panel-production-36127"
+  }
+}
